@@ -20,7 +20,7 @@ namespace MyApp
             var method = "get";
             var uri = $"lime://wa.gw.msging.net/accounts/+55{phoneNumber}";
             
-            var payload = new Payload(id, to, method, uri);
+            var payload = new PayloadAuthentication(id, to, method, uri);
 
             var authentication = new Authentication(payload);
             return authentication.GetIdentity();

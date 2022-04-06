@@ -6,9 +6,9 @@ public class Authentication : IAuthentication
 {    
     private string identityResponse = string.Empty;
     
-    private readonly Payload payload;
+    private readonly PayloadAuthentication payload;
 
-    public Authentication(Payload payload)
+    public Authentication(PayloadAuthentication payload)
     {        
         this.payload = payload;
     }

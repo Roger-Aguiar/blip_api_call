@@ -1,6 +1,6 @@
-public class Payload
+public class PayloadAuthentication
 {
-    public Payload(string? id, string? to, string? method, string? uri)
+    public PayloadAuthentication(string? id, string? to, string? method, string? uri)
     {
         this.id = id;
         this.to = to;
