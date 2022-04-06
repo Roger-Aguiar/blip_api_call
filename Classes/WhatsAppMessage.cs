@@ -5,8 +5,7 @@ using Newtonsoft.Json;
 public class WhatsAppMessage : IWhatsAppMessage
 {    
     private readonly PayloadBody payloadBody;
-    private string payloadResponse = string.Empty;
-
+    
     public WhatsAppMessage(PayloadBody payloadBody)
     {
         this.payloadBody = payloadBody;
