@@ -15,10 +15,18 @@ namespace MyApp
         static string GetIdentity()
         {
             var phoneNumber = "31983453069";
+            string [] phoneNumberSplit = phoneNumber.Split('(', ')', '-', '.');
+            phoneNumber = string.Empty;
+
+            foreach (var digit in phoneNumberSplit)
+            {
+                phoneNumber += digit;
+            }
+            
             var id = "a456-42665544000-0123e4567-e89b-12d3";
             var to = "postmaster@wa.gw.msging.net";
             var method = "get";
-            var uri = $"lime://wa.gw.msging.net/accounts/+55{phoneNumber}";
+            var uri = $"lime://wa.gw.msging.net/accounts/+55{phoneNumber.Trim()}";
             
             var payload = new PayloadAuthentication(id, to, method, uri);
 
